@@ -24,6 +24,11 @@ public class CarBrandController {
 
     private final CarBrandService carBrandService;
 
+    @GetMapping("info")
+    public String info (){
+        return "Cars rest api";
+    }
+
     @GetMapping("brands")
     @ResponseStatus(HttpStatus.OK)
     public List<CarBrandDto> carBrands() {
