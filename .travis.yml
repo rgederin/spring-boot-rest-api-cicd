@@ -18,5 +18,5 @@ script:
   - cat $HOME/.m2/settings.xml
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t f01dceec-d838-469e-bd21-649f6b7c487b
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent
