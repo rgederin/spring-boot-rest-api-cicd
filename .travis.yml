@@ -19,4 +19,4 @@ script:
 
 after_success:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent
-  - bash <(curl -s https://codecov.io/bash) -t f01dceec-d838-469e-bd21-649f6b7c487b
+  - bash <(curl -s https://codecov.io/bash)
