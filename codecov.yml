@@ -5,3 +5,5 @@ coverage:
         # basic
         target: 80%
         threshold: 1%
+ignore:
+  - "/Users/rgederin/github/spring-boot-rest-api-cicd/src/main/java/com/gederin/api/model"
