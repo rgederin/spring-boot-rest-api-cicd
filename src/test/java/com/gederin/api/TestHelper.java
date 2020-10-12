@@ -1,5 +1,6 @@
 package com.gederin.api;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gederin.api.dto.CarBrandDto;
 import com.gederin.api.dto.CarModelDto;
 import com.gederin.api.model.CarBrand;
@@ -66,5 +67,14 @@ public class TestHelper {
 
     public static List<CarModelDto> buildCarModelListDtoTestObject() {
         return Arrays.asList(buildCarModelDtoTestObject(),buildCarModelDtoTestObject());
+    }
+
+    public static String asJsonString(Object obj) {
+        try {
+            return new ObjectMapper().writeValueAsString(obj);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
