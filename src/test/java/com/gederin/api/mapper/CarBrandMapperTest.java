@@ -17,8 +17,6 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @SpringBootTest
-//@ExtendWith(SpringExtension.class)
-//@ContextConfiguration(classes = { SpringRunner.class })
 public class CarBrandMapperTest {
 
 
@@ -26,7 +24,7 @@ public class CarBrandMapperTest {
     private CarBrandMapper carBrandMapper;
 
     @Test
-    public void shouldMapToDto() {
+    void shouldMapToDto() {
         CarBrandDto carBrandDto = carBrandMapper.mapToCarBrandDto(buildCarBrandTestObject());
 
         assertThat(carBrandDto, notNullValue());
@@ -36,7 +34,7 @@ public class CarBrandMapperTest {
     }
 
     @Test
-    public void shouldMapToModel() {
+    void shouldMapToModel() {
         CarBrand carBrand = carBrandMapper.mapToCarBrand(buildCarBrandDtoTestObject());
 
         assertThat(carBrand, notNullValue());
